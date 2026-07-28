@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | IBANGA ADS & WEB DEVELOPER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <div id="loadingScreen" class="loading-screen"><div class="loading-ring"></div></div>
+
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand logo-text" href="index.html"><span>IBANGA</span> ADS</a>
+          <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+              <li class="nav-item"><a class="nav-link active" href="portfolio.html">Portfolio</a></li>
+              <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+              <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <button id="themeToggle" class="btn theme-toggle ms-lg-3"><i class="bi bi-moon"></i></button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container text-center reveal">
+          <p class="text-uppercase fw-semibold" style="letter-spacing:.25em;color:var(--accent);">Portfolio</p>
+          <h1 class="display-5 fw-bold mb-3">A Showcase of Premium Digital Work</h1>
+          <p class="mx-auto" style="max-width:700px;">Browse a selection of our website, branding and campaign projects.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="text-center mb-4 reveal">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="business">Business</button>
+            <button class="filter-btn" data-filter="schools">Schools</button>
+            <button class="filter-btn" data-filter="churches">Churches</button>
+            <button class="filter-btn" data-filter="landing">Landing Pages</button>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4 portfolio-card reveal" data-category="business">
+              <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80" alt="Business portfolio" data-lightbox />
+              <div class="card-body">
+                <h5>Corporate Growth Hub</h5>
+                <p>Business website with multi-service layout and lead capture.</p>
+                <div class="d-flex gap-2"><a href="#" class="btn btn-primary-custom btn-sm">Live Demo</a><a href="#" class="btn btn-outline-custom btn-sm">GitHub</a></div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 portfolio-card reveal" data-category="schools">
+              <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=900&q=80" alt="School portfolio" data-lightbox />
+              <div class="card-body">
+                <h5>Campus Connect</h5>
+                <p>Modern school website with admissions, academics and contact features.</p>
+                <div class="d-flex gap-2"><a href="#" class="btn btn-primary-custom btn-sm">Live Demo</a><a href="#" class="btn btn-outline-custom btn-sm">GitHub</a></div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 portfolio-card reveal" data-category="churches">
+              <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80" alt="Church portfolio" data-lightbox />
+              <div class="card-body">
+                <h5>Grace Center Platform</h5>
+                <p>Church website crafted for community engagement and events.</p>
+                <div class="d-flex gap-2"><a href="#" class="btn btn-primary-custom btn-sm">Live Demo</a><a href="#" class="btn btn-outline-custom btn-sm">GitHub</a></div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 portfolio-card reveal" data-category="landing">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="Landing page portfolio" data-lightbox />
+              <div class="card-body">
+                <h5>Launch Funnel</h5>
+                <p>Conversion-oriented landing page for a campaign launch.</p>
+                <div class="d-flex gap-2"><a href="#" class="btn btn-primary-custom btn-sm">Live Demo</a><a href="#" class="btn btn-outline-custom btn-sm">GitHub</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container text-center">
+        <p class="mb-0">© <span id="year"></span> IBANGA ADS & WEB DEVELOPER. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div class="floating-actions">
+      <a href="https://wa.me/2340000000000" class="fab" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <button id="backToTop" class="fab"><i class="bi bi-arrow-up"></i></button>
+    </div>
+
+    <div id="lightbox" class="lightbox"><img id="lightboxImage" src="" alt="Project preview" /></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>
