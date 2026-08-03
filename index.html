@@ -19,14 +19,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <!-- EmailJS Library - Replace YOUR_PUBLIC_KEY with your actual key from EmailJS dashboard -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+    <script type="text/javascript">
+      emailjs.init('YOUR_PUBLIC_KEY');
+    </script>
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "IBANGA ADS & WEB DEVELOPER",
         "url": "https://example.com",
         "email": "ibangagospel3@gmail.com",
         "telephone": "+2347034736696",
@@ -67,16 +67,23 @@
 
     <main>
       <section class="hero">
+        <div class="hero-slider" aria-hidden="true">
+          <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1800&q=80');"></div>
+          <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1800&q=80');"></div>
+          <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1800&q=80');"></div>
+          <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1800&q=80');"></div>
+        </div>
+        <div class="hero-overlay"></div>
         <div class="container">
           <div class="row align-items-center gy-5">
-            <div class="col-lg-7 hero-content reveal" data-aos="fade-right">
-              <p class="text-uppercase fw-semibold mb-3" style="letter-spacing:.25em;color:var(--accent);">Premium Digital Growth Partner</p>
-              <h1>Nigeria's Trusted Website Developer &<br /><span class="typing" data-words="Digital Marketing Expert,Brand Growth Strategist,Conversion Specialist">Digital Marketing Expert</span></h1>
-              <p>We help businesses grow through professional websites, Facebook Ads, Instagram Ads, TikTok Ads, Google Ads, SEO, Google Business Profile Optimization, branding and digital marketing.</p>
+            <div class="col-lg-7 hero-content">
+              <p class="eyebrow"><i class="bi bi-stars"></i>Premium Digital Growth Partner</p>
+              <h1>We build premium websites and campaigns that help brands grow.</h1>
+              <p>From elegant websites and SEO to high-performing Google Ads, Facebook Ads, Instagram Ads, TikTok Ads and branding, we help ambitious businesses scale with clarity and confidence.</p>
               <div class="hero-buttons d-flex flex-wrap gap-3 mb-4">
-                <a href="contact.html" class="btn btn-primary-custom">Get Started</a>
+                <a href="contact.html" class="btn btn-primary-custom"><i class="bi bi-rocket-takeoff me-2"></i>Get Started</a>
                 <a href="https://wa.me/2347034736696" target="_blank" class="btn btn-outline-custom"><i class="fab fa-whatsapp me-2"></i>WhatsApp Now</a>
-                <a href="tel:+2347034736696" class="btn btn-outline-custom"><i class="bi bi-telephone me-2"></i>Call Now</a>
+                <a href="tel:+2347034736696" class="btn btn-outline-custom"><i class="bi bi-telephone-fill me-2"></i>Call Now</a>
               </div>
               <div class="hero-badges">
                 <span class="badge">Professional Websites</span>
@@ -84,15 +91,20 @@
                 <span class="badge">Google Ads</span>
                 <span class="badge">SEO</span>
               </div>
+              <div class="hero-controls mt-5">
+                <span style="color: var(--text-muted); font-size: 0.9rem;">Navigate slides:</span>
+                <button class="btn-icon" id="prevSlide" aria-label="Previous slide" title="Previous slide"><i class="bi bi-chevron-left"></i></button>
+                <button class="btn-icon" id="nextSlide" aria-label="Next slide" title="Next slide"><i class="bi bi-chevron-right"></i></button>
+              </div>
             </div>
-            <div class="col-lg-5 reveal" data-aos="fade-left">
-              <div class="glass-card p-4 p-md-5">
+            <div class="col-lg-5">
+              <div class="glass-card p-4 p-md-5 hero-side-card">
                 <h4 class="fw-semibold mb-3">Why choose IBANGA?</h4>
                 <ul class="list-unstyled">
-                  <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i>Professional design and modern UI/UX</li>
-                  <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i>Fast, mobile responsive and SEO-ready websites</li>
-                  <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i>High-converting advertising campaigns</li>
-                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Dedicated support and reliable delivery</li>
+                  <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i>Premium design and modern UI/UX for real trust</li>
+                  <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i>Fast, responsive and SEO-ready websites built for growth</li>
+                  <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i>High-converting advertising campaigns with clear reporting</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Reliable support during launch and beyond</li>
                 </ul>
               </div>
             </div>
@@ -102,7 +114,7 @@
 
       <section>
         <div class="container">
-          <div class="row g-4 text-center reveal" data-aos="fade-up">
+          <div class="row g-4 text-center">
             <div class="col-sm-6 col-lg-3"><div class="stat-card"><div class="counter" data-target="100" data-suffix="+">0</div><p class="mb-0">Projects Completed</p></div></div>
             <div class="col-sm-6 col-lg-3"><div class="stat-card"><div class="counter" data-target="50" data-suffix="+">0</div><p class="mb-0">Happy Clients</p></div></div>
             <div class="col-sm-6 col-lg-3"><div class="stat-card"><div class="counter" data-target="5" data-suffix="+">0</div><p class="mb-0">Years Experience</p></div></div>
@@ -111,13 +123,41 @@
         </div>
       </section>
 
+      <section>
+        <div class="container">
+          <div class="row g-4 align-items-stretch">
+            <div class="col-lg-4">
+              <div class="service-card h-100">
+                <div class="icon-wrap"><i class="bi bi-graph-up-arrow"></i></div>
+                <h4>Growth Strategy</h4>
+                <p>We turn your business goals into clear digital action plans that are measurable and built to scale.</p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="service-card h-100">
+                <div class="icon-wrap"><i class="bi bi-laptop"></i></div>
+                <h4>Premium Web Experience</h4>
+                <p>Elegant, fast and conversion-focused websites designed to represent your brand with confidence.</p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="service-card h-100">
+                <div class="icon-wrap"><i class="bi bi-megaphone"></i></div>
+                <h4>Performance Marketing</h4>
+                <p>Smart campaigns across Google, Meta and social channels that bring qualified traffic and leads.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="about-preview">
         <div class="container">
           <div class="row g-5 align-items-center">
-            <div class="col-lg-6 reveal" data-aos="fade-right"><img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80" alt="Professional web developer at work" class="rounded-4 shadow" /></div>
-            <div class="col-lg-6 reveal" data-aos="fade-left">
-              <div class="section-title text-start"><p class="text-uppercase fw-semibold" style="letter-spacing:.25em;color:var(--accent);">About Us</p><h2>We build websites and campaigns that help businesses grow.</h2></div>
-              <p>IBANGA ADS & WEB DEVELOPER is a digital agency specializing in building modern websites and running profitable online advertising campaigns for businesses across Nigeria.</p>
+            <div class="col-lg-6"><img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80" alt="Professional web developer at work" class="rounded-4 shadow" /></div>
+            <div class="col-lg-6">
+              <div class="section-title text-start"><p class="text-uppercase fw-semibold" style="letter-spacing:.25em;color:var(--accent);">About Us</p><h2>We build websites and campaigns that make businesses feel premium online.</h2></div>
+              <p>IBANGA ADS & WEB DEVELOPER is a digital agency specializing in building modern websites and running profitable online advertising campaigns for businesses across Nigeria and beyond.</p>
               <div class="row g-3 mt-2">
                 <div class="col-md-6"><div class="service-card h-100"><h5 class="mb-2">Mission</h5><p class="mb-0">To help businesses establish a strong digital presence and grow using smart web and marketing solutions.</p></div></div>
                 <div class="col-md-6"><div class="service-card h-100"><h5 class="mb-2">Vision</h5><p class="mb-0">To become a trusted growth partner for ambitious brands seeking premium digital transformation.</p></div></div>
@@ -129,83 +169,86 @@
 
       <section>
         <div class="container">
-          <div class="section-title text-center reveal" data-aos="fade-up"><p class="text-uppercase fw-semibold" style="letter-spacing:.25em;color:var(--accent);">Services</p><h2>Everything you need to grow online</h2><p>From stunning websites to high-converting paid ads, we provide complete growth solutions for your business.</p></div>
+          <div class="section-title text-center"><p class="text-uppercase fw-semibold" style="letter-spacing:.25em;color:var(--accent);">Services</p><h2>High-impact solutions for modern brands</h2><p>From premium websites to high-converting paid media, we provide complete growth solutions for your business.</p></div>
           <div class="row g-4">
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-window-stack"></i></div><h4>Website Development</h4><p>Modern, responsive websites built to impress and convert.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-building"></i></div><h4>Business Website</h4><p>Professional websites for companies, agencies and entrepreneurs.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-mortarboard"></i></div><h4>School Portal</h4><p>Dynamic school portals with admissions, news and communication tools.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-bell"></i></div><h4>Church Website</h4><p>Beautiful church websites with events, announcements and contact features.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-hospital"></i></div><h4>Hospital Website</h4><p>Trusted healthcare websites with service details and appointment features.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-house-door"></i></div><h4>Hotel Website</h4><p>Luxury websites with booking-friendly layouts and visual storytelling.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-cup-hot"></i></div><h4>Restaurant Website</h4><p>Menu-focused websites with reservation and ordering features.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-people"></i></div><h4>NGO Website</h4><p>Mission-driven websites built for visibility and trust.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-building-fill"></i></div><h4>Real Estate Website</h4><p>Property listing sites with search, inquiry, and image galleries.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-file-earmark-person"></i></div><h4>Portfolio Website</h4><p>Showcase work with premium layouts and modern storytelling.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-briefcase"></i></div><h4>Corporate Website</h4><p>Professional digital presence for agencies, firms and corporations.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-cart"></i></div><h4>E-commerce Website</h4><p>Online stores with secure payments and easy management.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-bullseye"></i></div><h4>Landing Page</h4><p>Focused pages designed to convert traffic into leads or sales.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-journal-richtext"></i></div><h4>Blog Website</h4><p>Content-rich websites built for SEO and audience trust.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-arrow-repeat"></i></div><h4>Website Redesign</h4><p>Refresh outdated websites with modern design and better performance.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-wrench"></i></div><h4>Website Maintenance</h4><p>Ongoing support, updates and performance tuning.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-speedometer2"></i></div><h4>Website Speed Optimization</h4><p>Improve load speed, user experience and search ranking.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-shield-lock"></i></div><h4>Website Security</h4><p>Protection with SSL, monitoring and secure architecture.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-search"></i></div><h4>Search Engine Optimization (SEO)</h4><p>On-page and technical SEO for better visibility in search results.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-geo-alt"></i></div><h4>Google Business Profile Setup</h4><p>Optimize your profile to rank higher on local search and Google Maps.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-map"></i></div><h4>Google Maps Optimization</h4><p>Improve local trust and discoverability with map-friendly SEO.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-google"></i></div><h4>Google Ads</h4><p>High intent search campaigns to get leads and sales.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-facebook"></i></div><h4>Facebook Ads</h4><p>Targeted ad campaigns that increase awareness and conversions.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-instagram"></i></div><h4>Instagram Ads</h4><p>Visually exciting campaigns that connect with your ideal audience.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-play-btn"></i></div><h4>TikTok Ads</h4><p>Short-form video campaigns with fast reach and strong engagement.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-youtube"></i></div><h4>YouTube Ads</h4><p>Video campaigns built for awareness, consideration and sales.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-share"></i></div><h4>Social Media Marketing</h4><p>Strategies that grow reach, engagement and conversion across platforms.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-people"></i></div><h4>Social Media Management</h4><p>Consistent posting, engagement and content planning for your brand.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-palette"></i></div><h4>Logo Design</h4><p>Memorable logo concepts that reflect your business personality.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-brush"></i></div><h4>Graphic Design</h4><p>Creative visuals for branding, campaigns and business communication.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-award"></i></div><h4>Brand Identity</h4><p>Visual identity systems that strengthen perception and recognition.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-globe2"></i></div><h4>Domain Registration</h4><p>Secure a memorable domain that matches your brand perfectly.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-server"></i></div><h4>Web Hosting</h4><p>Reliable hosting for performance, uptime and professional delivery.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-envelope-at"></i></div><h4>Business Email Setup</h4><p>Professional email accounts for credibility and communication.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-lock"></i></div><h4>SSL Installation</h4><p>Secure your website with HTTPS and trusted encryption.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-robot"></i></div><h4>AI Chatbot Integration</h4><p>Improve support and engagement with smart automated conversations.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-credit-card"></i></div><h4>Payment Gateway Integration</h4><p>Seamless online payments for e-commerce and service businesses.</p></div></div>
-            <div class="col-md-6 col-lg-4 reveal" data-aos="fade-up"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-calendar3"></i></div><h4>Booking Systems</h4><p>Allow clients to book appointments or services online with ease.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-window-stack"></i></div><h4>Website Development</h4><p>Modern, responsive websites built to impress, inform and convert.</p><a href="services.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-building"></i></div><h4>Business Website</h4><p>Professional websites for companies, agencies and entrepreneurs.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-mortarboard"></i></div><h4>School Portal</h4><p>Dynamic school portals with admissions, news and communication tools.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-bell"></i></div><h4>Church Website</h4><p>Beautiful church websites with events, announcements and contact features.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-hospital"></i></div><h4>Hospital Website</h4><p>Trusted healthcare websites with service details and appointment features.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-house-door"></i></div><h4>Hotel Website</h4><p>Luxury websites with booking-friendly layouts and visual storytelling.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-cup-hot"></i></div><h4>Restaurant Website</h4><p>Menu-focused websites with reservation and ordering features.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-people"></i></div><h4>NGO Website</h4><p>Mission-driven websites built for visibility and trust.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-building-fill"></i></div><h4>Real Estate Website</h4><p>Property listing sites with search, inquiry, and image galleries.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-file-earmark-person"></i></div><h4>Portfolio Website</h4><p>Showcase work with premium layouts and modern storytelling.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-briefcase"></i></div><h4>Corporate Website</h4><p>Professional digital presence for agencies, firms and corporations.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-cart"></i></div><h4>E-commerce Website</h4><p>Online stores with secure payments and easy management.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-bullseye"></i></div><h4>Landing Page</h4><p>Focused pages designed to convert traffic into leads or sales.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-journal-richtext"></i></div><h4>Blog Website</h4><p>Content-rich websites built for SEO and audience trust.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-arrow-repeat"></i></div><h4>Website Redesign</h4><p>Refresh outdated websites with modern design and better performance.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-wrench"></i></div><h4>Website Maintenance</h4><p>Ongoing support, updates and performance tuning.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-speedometer2"></i></div><h4>Website Speed Optimization</h4><p>Improve load speed, user experience and search ranking.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-shield-lock"></i></div><h4>Website Security</h4><p>Protection with SSL, monitoring and secure architecture.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-search"></i></div><h4>Search Engine Optimization (SEO)</h4><p>On-page and technical SEO for better visibility in search results.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-geo-alt"></i></div><h4>Google Business Profile Setup</h4><p>Optimize your profile to rank higher on local search and Google Maps.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-map"></i></div><h4>Google Maps Optimization</h4><p>Improve local trust and discoverability with map-friendly SEO.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-google"></i></div><h4>Google Ads</h4><p>High-intent search campaigns tailored to capture qualified leads.</p><a href="services.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-facebook"></i></div><h4>Facebook Ads</h4><p>Targeted campaigns that grow visibility, engagement and conversions.</p><a href="services.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-instagram"></i></div><h4>Instagram Ads</h4><p>Visually compelling campaigns created to reach your ideal audience.</p><a href="services.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-play-btn"></i></div><h4>TikTok Ads</h4><p>Short-form video campaigns designed for fast reach and strong engagement.</p><a href="services.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-youtube"></i></div><h4>YouTube Ads</h4><p>Video campaigns built for awareness, consideration and sales.</p><a href="services.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-share"></i></div><h4>Social Media Marketing</h4><p>Strategies that grow reach, engagement and conversion across platforms.</p><a href="services.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-people"></i></div><h4>Social Media Management</h4><p>Consistent posting, engagement and content planning for your brand.</p><a href="services.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-palette"></i></div><h4>Logo Design</h4><p>Memorable logo concepts that reflect your business personality.</p><a href="services.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-brush"></i></div><h4>Graphic Design</h4><p>Creative visuals for branding, campaigns and business communication.</p><a href="services.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-award"></i></div><h4>Brand Identity</h4><p>Visual identity systems that strengthen perception and recognition.</p><a href="services.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-globe2"></i></div><h4>Domain Registration</h4><p>Secure a memorable domain that matches your brand perfectly.</p><a href="services.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-server"></i></div><h4>Web Hosting</h4><p>Reliable hosting for performance, uptime and professional delivery.</p><a href="services.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-envelope-at"></i></div><h4>Business Email Setup</h4><p>Professional email accounts for credibility and communication.</p><a href="services.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-lock"></i></div><h4>SSL Installation</h4><p>Secure your website with HTTPS and trusted encryption.</p><a href="services.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-robot"></i></div><h4>AI Chatbot Integration</h4><p>Improve support and engagement with smart automated conversations.</p><a href="services.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-credit-card"></i></div><h4>Payment Gateway Integration</h4><p>Seamless online payments for e-commerce and service businesses.</p><a href="services.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
+            <div class="col-md-6 col-lg-4"><div class="service-card h-100"><div class="icon-wrap"><i class="bi bi-calendar3"></i></div><h4>Booking Systems</h4><p>Allow clients to book appointments or services online with ease.</p><a href="services.html" class="learn-more">Learn More <i class="bi bi-arrow-right"></i></a></div></div>
           </div>
         </div>
       </section>
 
       <section>
         <div class="container">
-          <div class="section-title text-center reveal" data-aos="fade-up"><p class="text-uppercase fw-semibold" style="letter-spacing:.25em;color:var(--accent);">Why Choose Us</p><h2>Professional design, clear strategy and premium support</h2></div>
+          <div class="section-title text-center"><p class="text-uppercase fw-semibold" style="letter-spacing:.25em;color:var(--accent);">Why Choose Us</p><h2>Professional design, clear strategy and premium support</h2><p>We deliver more than just websites and ads—we deliver measurable results backed by expertise and commitment.</p></div>
           <div class="row g-4">
-            <div class="col-sm-6 col-lg-4 reveal" data-aos="fade-up"><div class="feature-card h-100"><h5>Professional Design</h5><p>Beautiful, modern websites that reflect your brand and build trust.</p></div></div>
-            <div class="col-sm-6 col-lg-4 reveal" data-aos="fade-up"><div class="feature-card h-100"><h5>Mobile Responsive</h5><p>Every website looks great and works perfectly on mobile, tablet and desktop.</p></div></div>
-            <div class="col-sm-6 col-lg-4 reveal" data-aos="fade-up"><div class="feature-card h-100"><h5>SEO Optimized</h5><p>Built with search visibility in mind so your business can be found online.</p></div></div>
-            <div class="col-sm-6 col-lg-4 reveal" data-aos="fade-up"><div class="feature-card h-100"><h5>Fast Loading</h5><p>Optimized for speed, performance and user experience.</p></div></div>
-            <div class="col-sm-6 col-lg-4 reveal" data-aos="fade-up"><div class="feature-card h-100"><h5>Secure Website</h5><p>SSL, modern architecture and secure delivery for peace of mind.</p></div></div>
-            <div class="col-sm-6 col-lg-4 reveal" data-aos="fade-up"><div class="feature-card h-100"><h5>Affordable Pricing</h5><p>Premium solutions with flexible pricing for businesses of every size.</p></div></div>
-            <div class="col-sm-6 col-lg-4 reveal" data-aos="fade-up"><div class="feature-card h-100"><h5>Unlimited Support</h5><p>We stay with you beyond launch to keep your website performing well.</p></div></div>
-            <div class="col-sm-6 col-lg-4 reveal" data-aos="fade-up"><div class="feature-card h-100"><h5>Free Consultation</h5><p>Start with a friendly consultation and a clear growth plan.</p></div></div>
-            <div class="col-sm-6 col-lg-4 reveal" data-aos="fade-up"><div class="feature-card h-100"><h5>100% Customer Satisfaction</h5><p>Your success is our priority, and we work hard to deliver it.</p></div></div>
+            <div class="col-sm-6 col-lg-4"><div class="feature-card h-100"><h5>Professional Design</h5><p>Beautiful, modern websites that reflect your brand and build trust.</p></div></div>
+            <div class="col-sm-6 col-lg-4"><div class="feature-card h-100"><h5>Mobile Responsive</h5><p>Every website looks great and works perfectly on mobile, tablet and desktop.</p></div></div>
+            <div class="col-sm-6 col-lg-4"><div class="feature-card h-100"><h5>SEO Optimized</h5><p>Built with search visibility in mind so your business can be found online.</p></div></div>
+            <div class="col-sm-6 col-lg-4"><div class="feature-card h-100"><h5>Fast Loading</h5><p>Optimized for speed, performance and user experience.</p></div></div>
+            <div class="col-sm-6 col-lg-4"><div class="feature-card h-100"><h5>Secure Website</h5><p>SSL, modern architecture and secure delivery for peace of mind.</p></div></div>
+            <div class="col-sm-6 col-lg-4"><div class="feature-card h-100"><h5>Affordable Pricing</h5><p>Premium solutions with flexible pricing for businesses of every size.</p></div></div>
+            <div class="col-sm-6 col-lg-4"><div class="feature-card h-100"><h5>Unlimited Support</h5><p>We stay with you beyond launch to keep your website performing well.</p></div></div>
+            <div class="col-sm-6 col-lg-4"><div class="feature-card h-100"><h5>Free Consultation</h5><p>Start with a friendly consultation and a clear growth plan.</p></div></div>
+            <div class="col-sm-6 col-lg-4"><div class="feature-card h-100"><h5>100% Customer Satisfaction</h5><p>Your success is our priority, and we work hard to deliver it.</p></div></div>
           </div>
         </div>
       </section>
 
       <section>
         <div class="container">
-          <div class="section-title text-center reveal" data-aos="fade-up"><p class="text-uppercase fw-semibold" style="letter-spacing:.25em;color:var(--accent);">Testimonials</p><h2>What our clients say</h2></div>
+          <div class="section-title text-center"><p class="text-uppercase fw-semibold" style="letter-spacing:.25em;color:var(--accent);">Testimonials</p><h2>Trusted by founders and growing businesses</h2></div>
           <div class="row justify-content-center">
-            <div class="col-lg-8 reveal" data-aos="fade-up">
+            <div class="col-lg-8">
               <div class="testimonial-card active">
-                <p class="testimonial-text">“IBANGA built us a beautiful website and helped us reach more customers online. The process was smooth and professional.”</p>
-                <h5 class="mt-3 mb-0">Amina Yusuf</h5><small class="text-muted">CEO, Bright Brands</small>
+                <div class="d-flex align-items-center gap-3 mb-3"><img class="avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Client portrait" /><div><h5 class="mb-0">Amina Yusuf</h5><small class="text-muted">CEO, Bright Brands</small></div></div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text mt-3">“IBANGA built us a beautiful website and helped us reach more customers online. The process was smooth, strategic and genuinely professional.”</p>
               </div>
               <div class="testimonial-card">
-                <p class="testimonial-text">“The ads strategy was excellent and the website performance improved almost immediately.”</p>
-                <h5 class="mt-3 mb-0">Daniel K.</h5><small class="text-muted">Founder, Nova Studio</small>
+                <div class="d-flex align-items-center gap-3 mb-3"><img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Client portrait" /><div><h5 class="mb-0">Daniel K.</h5><small class="text-muted">Founder, Nova Studio</small></div></div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text mt-3">“The ads strategy was excellent and the website performance improved almost immediately. Their communication and execution were exceptional.”</p>
               </div>
               <div class="testimonial-card">
-                <p class="testimonial-text">“Professional, responsive and results-driven. We highly recommend their services.”</p>
-                <h5 class="mt-3 mb-0">Grace E.</h5><small class="text-muted">Marketing Lead, Hillcrest</small>
+                <div class="d-flex align-items-center gap-3 mb-3"><img class="avatar" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80" alt="Client portrait" /><div><h5 class="mb-0">Grace E.</h5><small class="text-muted">Marketing Lead, Hillcrest</small></div></div>
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text mt-3">“Professional, responsive and results-driven. We highly recommend their services for any business that wants to grow online.”</p>
               </div>
             </div>
           </div>
@@ -214,13 +257,39 @@
 
       <section>
         <div class="container">
-          <div class="section-title text-center reveal" data-aos="fade-up"><p class="text-uppercase fw-semibold" style="letter-spacing:.25em;color:var(--accent);">FAQ</p><h2>Frequently asked questions</h2></div>
-          <div class="row justify-content-center reveal" data-aos="fade-up">
-            <div class="col-lg-8">
+          <div class="section-title text-center"><p class="text-uppercase fw-semibold" style="letter-spacing:.25em;color:var(--accent);">FAQ</p><h2>Everything you need to know before we begin</h2></div>
+          <div class="row justify-content-center">
+            <div class="col-lg-9">
               <div class="accordion" id="faqAccordion">
-                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faqOne">How long does a website take to build?</button></h2><div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">Most projects take between 3 and 10 business days depending on the scope and complexity.</div></div></div>
-                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqTwo">Do you also manage ad campaigns?</button></h2><div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes, we manage and optimize Facebook, Instagram, TikTok, Google Ads and SEO campaigns.</div></div></div>
-                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqThree">Do you provide maintenance after launch?</button></h2><div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Absolutely. We offer website maintenance, updates, security and ongoing support.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faqOne">How long does a website take to build?</button></h2><div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">Most projects take between 3 and 10 business days depending on the scope, pages, features and feedback timeline.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqTwo">How much does a website cost?</button></h2><div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Pricing depends on complexity, number of pages and required functionality, but we offer flexible packages for startups, SMEs and established brands.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqThree">Can I update my website after launch?</button></h2><div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes. We can build your site with a simple content management system or provide training so you can update text, images and basic content easily.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqFour">Is the website mobile responsive?</button></h2><div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Absolutely. Every website we build is fully responsive and optimized for mobile, tablet and desktop screens.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqFive">Will my website be SEO optimized?</button></h2><div id="faqFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes. We implement SEO-ready structure, metadata, fast performance and on-page optimization from the start.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqSix">Do you provide hosting?</button></h2><div id="faqSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes. We can help with hosting setup, domain connection and reliable performance support for your website.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqSeven">Do you provide domain registration?</button></h2><div id="faqSeven" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes, we can guide you through domain registration and help you secure a memorable brand domain.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqEight">Do you redesign websites?</button></h2><div id="faqEight" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes. We can redesign outdated websites to improve modern visuals, user experience and conversion rates.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqNine">Do you maintain websites?</button></h2><div id="faqNine" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes, we offer maintenance, updates, backups, performance checks and ongoing support after launch.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqTen">Do you build eCommerce websites?</button></h2><div id="faqTen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes. We can build online stores with product pages, carts, checkout and payment integrations.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqEleven">How much does Facebook Ads cost?</button></h2><div id="faqEleven" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Budget depends on your target audience, objectives and competition, but we can create an affordable plan that fits your business goals.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqTwelve">How quickly will I get results from ads?</button></h2><div id="faqTwelve" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Some campaigns generate early traction quickly, while stronger results often appear after testing, optimization and enough data.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqThirteen">Can you target specific locations?</button></h2><div id="faqThirteen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes. We can target local, regional or international audiences based on your ideal customer locations.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqFourteen">Can you generate leads through ads?</button></h2><div id="faqFourteen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Absolutely. We design campaigns focused on lead generation, conversions, sign-ups, bookings or sales depending on your business objective.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqFifteen">How do Instagram Ads work?</button></h2><div id="faqFifteen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Instagram Ads show your content to selected audiences using interest, demographic and behavior targeting across feed, stories and reels.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqSixteen">Can you promote my business on Instagram?</button></h2><div id="faqSixteen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes. We create campaigns that raise awareness, drive engagement and produce measurable outcomes for your brand.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqSeventeen">Can you increase sales with Instagram Ads?</button></h2><div id="faqSeventeen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes, especially when the creative, offer and audience targeting are aligned with a clear sales goal.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqEighteen">What is Google Ads?</button></h2><div id="faqEighteen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Google Ads is a paid advertising platform that helps businesses appear in search results, YouTube and partner websites for highly relevant queries.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqNineteen">How much is Google Ads management?</button></h2><div id="faqNineteen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Management fees vary based on campaign complexity, but we offer competitive packages with strategy, setup and optimization included.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqTwenty">How long before I see results from Google Ads?</button></h2><div id="faqTwenty" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">You can see early click and engagement data shortly after launch, while consistent conversion growth usually comes after optimization.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqTwentyone">Can TikTok Ads help my business?</button></h2><div id="faqTwentyone" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes, particularly for brands that want to reach younger audiences with short-form, engaging video content.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqTwentytwo">Which businesses should use TikTok Ads?</button></h2><div id="faqTwentytwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Retail, fashion, food, beauty, entertainment and service businesses often benefit from TikTok’s fast-paced, visual content environment.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqTwentythree">What is SEO?</button></h2><div id="faqTwentythree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">SEO is the practice of improving your website so it performs better in search engine results and attracts more organic traffic.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqTwentyfour">How long does SEO take?</button></h2><div id="faqTwentyfour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">SEO is a long-term strategy, and meaningful results often appear over several weeks to months depending on the industry and competition.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqTwentyfive">Can you rank my website on Google?</button></h2><div id="faqTwentyfive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">We can improve your site’s visibility through technical, on-page and content-focused SEO strategies, but organic rankings depend on many factors.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqTwentysix">Do you offer after-sales support?</button></h2><div id="faqTwentysix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes. We provide dependable support after launch to help keep your website and campaigns running smoothly.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqTwentyseven">Do you offer training?</button></h2><div id="faqTwentyseven" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes. We can train you or your team on how to manage your website, content and basic campaign dashboards.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqTwentyeight">Can I contact you on WhatsApp?</button></h2><div id="faqTwentyeight" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Absolutely. You can contact us directly on WhatsApp for quick questions, quotes or project discussions.</div></div></div>
+                <div class="faq-item accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqTwentynine">What payment methods do you accept?</button></h2><div id="faqTwentynine" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">We accept payment arrangements that are convenient for you, and we can discuss the best option for your project before work begins.</div></div></div>
               </div>
             </div>
           </div>
@@ -230,31 +299,33 @@
       <section>
         <div class="container">
           <div class="row g-4 align-items-center">
-            <div class="col-lg-6 reveal" data-aos="fade-right">
+            <div class="col-lg-6">
               <div class="contact-card h-100">
                 <div class="section-title text-start"><p class="text-uppercase fw-semibold" style="letter-spacing:.25em;color:var(--accent);">Contact</p><h2>Let’s build something powerful together</h2></div>
-                <form>
+                <form id="contactForm" novalidate>
                   <div class="row g-3">
-                    <div class="col-md-6"><input class="form-control" placeholder="Full Name" required /></div>
-                    <div class="col-md-6"><input class="form-control" type="email" placeholder="Email" required /></div>
-                    <div class="col-md-6"><input class="form-control" placeholder="Phone Number" /></div>
-                    <div class="col-md-6"><input class="form-control" placeholder="Company Name" /></div>
-                    <div class="col-md-6"><select class="form-select"><option>Website Development</option><option>Google Ads</option><option>Facebook Ads</option><option>SEO</option><option>Branding</option></select></div>
-                    <div class="col-md-6"><input class="form-control" placeholder="Budget" /></div>
-                    <div class="col-12"><textarea class="form-control" rows="4" placeholder="Project Details"></textarea></div>
-                    <div class="col-12"><button class="btn btn-primary-custom">Submit</button></div>
+                    <div class="col-md-6"><input type="text" class="form-control" name="fullName" placeholder="Full Name" required /></div>
+                    <div class="col-md-6"><input type="email" class="form-control" name="email" placeholder="Email" required /></div>
+                    <div class="col-md-6"><input type="tel" class="form-control" name="phone" placeholder="Phone Number" /></div>
+                    <div class="col-md-6"><input type="text" class="form-control" name="businessName" placeholder="Company Name" /></div>
+                    <div class="col-md-6"><select class="form-select" name="serviceType"><option value="">Select Service</option><option value="Website Development">Website Development</option><option value="Google Ads">Google Ads</option><option value="Facebook Ads">Facebook Ads</option><option value="SEO">SEO</option><option value="Branding">Branding</option></select></div>
+                    <div class="col-md-6"><input type="text" class="form-control" name="budget" placeholder="Budget" /></div>
+                    <div class="col-12"><textarea class="form-control" name="projectDetails" rows="4" placeholder="Project Details" required></textarea></div>
+                    <div class="col-12"><button type="submit" class="btn btn-primary-custom">Submit</button></div>
                   </div>
                 </form>
               </div>
             </div>
-            <div class="col-lg-6 reveal" data-aos="fade-left">
+            <div class="col-lg-6">
               <div class="contact-card h-100">
                 <h4 class="mb-3">Reach us directly</h4>
-                <p><i class="bi bi-telephone me-2"></i>+234 703 473 6696</p>
-                <p><i class="bi bi-whatsapp me-2"></i>+234 703 473 6696</p>
-                <p><i class="bi bi-envelope me-2"></i>ibangagospel3@gmail.com</p>
-                <p><i class="bi bi-clock me-2"></i>Mon - Sat • 8:00 AM - 6:00 PM</p>
-                <div class="d-flex flex-wrap gap-2 mt-3">
+                <div class="contact-links">
+                  <a href="tel:+2347034736696"><i class="bi bi-telephone"></i>+234 703 473 6696</a>
+                  <a href="https://wa.me/2347034736696"><i class="bi bi-whatsapp"></i>WhatsApp</a>
+                  <a href="mailto:ibangagospel3@gmail.com"><i class="bi bi-envelope"></i>ibangagospel3@gmail.com</a>
+                  <a href="#"><i class="bi bi-clock"></i>Mon - Sat • 8:00 AM - 6:00 PM</a>
+                </div>
+                <div class="d-flex flex-wrap gap-2 mt-4">
                   <a href="tel:+2347034736696" class="btn btn-primary-custom">Call Now</a>
                   <a href="https://wa.me/2347034736696" class="btn btn-outline-custom">Chat on WhatsApp</a>
                   <a href="mailto:ibangagospel3@gmail.com" class="btn btn-outline-custom">Send Email</a>
@@ -270,12 +341,12 @@
     <footer class="footer">
       <div class="container">
         <div class="row g-4">
-          <div class="col-lg-3"><h5>IBANGA ADS & WEB DEVELOPER</h5><p class="text-muted">Professional Website Development • Digital Marketing • Facebook Ads • Instagram Ads • TikTok Ads • Google Ads • SEO • Branding</p></div>
+          <div class="col-lg-3"><h5>IBANGA ADS & WEB DEVELOPER</h5><p>Professional websites, campaigns and growth strategy for ambitious businesses.</p></div>
           <div class="col-lg-3"><h5>Quick Links</h5><ul class="list-unstyled"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-          <div class="col-lg-3"><h5>Social Icons</h5><div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-tiktok"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-github"></i></a></div></div>
-          <div class="col-lg-3"><h5>Newsletter</h5><form><input class="form-control mb-2" placeholder="Email address" /><button class="btn btn-primary-custom w-100">Subscribe</button></form></div>
+          <div class="col-lg-3"><h5>Services</h5><ul class="list-unstyled"><li>Website Development</li><li>Google Ads</li><li>Facebook Ads</li><li>Instagram Ads</li><li>SEO & Branding</li></ul></div>
+          <div class="col-lg-3"><h5>Newsletter</h5><form id="newsletterForm"><input type="email" class="form-control mb-2" name="subscriberEmail" placeholder="Email address" required /><button type="submit" class="btn btn-primary-custom w-100">Subscribe</button></form></div>
         </div>
-        <div class="border-top mt-4 pt-3 text-center text-muted"><p class="mb-0">© <span id="year"></span> IBANGA ADS & WEB DEVELOPER. All Rights Reserved.</p></div>
+        <div class="border-top mt-4 pt-3 text-center"><p class="mb-0">© <span id="year"></span> IBANGA ADS & WEB DEVELOPER. All Rights Reserved.</p></div>
       </div>
     </footer>
 
@@ -283,7 +354,7 @@
     <div id="cookieBanner" class="cookie-banner glass-card p-3"><h6 class="mb-2">We use cookies</h6><p class="small mb-2">This site uses cookies to improve experience and deliver relevant content.</p><button id="cookieAccept" class="btn btn-primary-custom btn-sm">Accept</button></div>
     <div id="lightbox" class="lightbox"><img id="lightboxImage" src="" alt="Project preview" /></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="assets/js/emailjs-service.js"></script>
     <script src="assets/js/script.js"></script>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </body>
